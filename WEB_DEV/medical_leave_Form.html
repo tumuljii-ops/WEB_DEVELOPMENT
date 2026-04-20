@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Student Leave Form</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            position: relative;
+        }
+        
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+            background-image: url("https://media.collegedekho.com/media/img/institute/crawled_images/None/FGSDFGFDHFHGFHJDF.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            opacity: 0.4;   
+            z-index: -1;
+        }
+
+        h2 {
+            text-align: center;
+            color: white;
+            padding-top: 20px;
+        }
+
+        form {
+            width: 400px;
+            margin: 30px auto;
+        }
+
+        fieldset {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 20px;
+            border-radius: 10px;
+            border: none;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+
+        label {
+            color: brown;
+            font-weight: bold;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 6px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        input[type="radio"] {
+            width: auto;
+            margin-right: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: brown;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+            border: none;
+            padding: 8px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: darkred;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Student Leave Form</h2>
+
+<form action="submit.html" method="GET" novalidate autocomplete="off">
+
+    <fieldset>
+        <legend><b>Leave Details</b></legend>
+
+        <label>Student Name:</label>
+        <input type="text" placeholder="Enter your name" required>
+
+        <label>Student ID:</label>
+        <input type="text" placeholder="Enter student ID" required>
+
+        <label>Leave Start Date:</label>
+        <input type="date" min="2026-02-01" max="2026-12-31" required>
+
+        <label>Leave End Date:</label>
+        <input type="date" min="2026-02-01" max="2026-12-31" required>
+
+        <label>Reason for Leave:</label><br>
+        <input type="radio" name="reason" required> Medical
+        <input type="radio" name="reason"> Urgent
+        <input type="radio" name="reason"> Home
+        <input type="radio" name="reason"> Others
+        <br><br>
+
+        <label>Medical Reason (Explain):</label>
+        <textarea rows="4" placeholder="Explain your reason"></textarea>
+
+        <label>Going With (Multiple Select):</label>
+        <select multiple size="4">
+            <option>Parents</option>
+            <option>Friends</option>
+            <option>Going Alone</option>
+            <option>Others</option>
+        </select>
+
+        <label>Enter a Phone Number:</label>
+        <input type="tel" placeholder="99999-99999"
+               pattern="[0-9]{5}-[0-9]{5}" required>
+
+        <input type="submit"
+               value="Submit"
+               onclick="alert('Leave form submitted successfully!')">
+
+    </fieldset>
+
+</form>
+
+</body>
+</html>
+
+
+
+
